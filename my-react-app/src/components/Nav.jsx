@@ -1,8 +1,17 @@
 const Nav = () => {
     return (
-        <div>
-            Hello, World!
+        <div className="">
+            <div>
+                About Me
+            </div>
+            <div>
+                Projects
+            </div>
+            <div>
+                Contact Me
+            </div>
         </div>
+        
     )
 }
 

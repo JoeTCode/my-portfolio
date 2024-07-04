@@ -1,9 +1,16 @@
 import Nav from './components/Nav.jsx';
+import Contact from './components/Contact.jsx';
+import Hero from './components/Hero.jsx';
+import Projects from './components/Projects.jsx';
 
-
-function App() {
+const App = () => {
   return (
-    <Nav/>
+    <div>
+        <Nav/>
+        <Hero/>
+        <Projects/>
+        <Contact/>
+    </div>
   );
   
 }
