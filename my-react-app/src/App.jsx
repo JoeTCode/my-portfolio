@@ -14,7 +14,7 @@ extend({ TextGeometry })
 
 
 const Text = ({ text, color, ...props }) => {
-  const font = useLoader(FontLoader, '../public/fonts/Inter_Regular.json');
+  const font = useLoader(FontLoader, '../public/fonts/Inter Black_Regular.json');
   const textOptions = {
     font,
     size: 1,
@@ -33,10 +33,11 @@ const App = () => {
   return (
     <div>
         <Canvas>
-          <ambientLight />
+          <ambientLight intensity={2.5} />
           <pointLight position={[10, 10, 10]} />
           <PerspectiveCamera makeDefault position={[-1, 4.5, 13]} rotation={[0, 0, 0]} />
-          <Text text="Hello, I'm Joe!" position={[-8, 4.5, 3]} color="white" />
+          <Text text="Hello, I'm " position={[-8, 4.5, 3]} color="white" />
+          <Text text="Joe" position={[-1.6, 4.5, 3]} color="rgb(151, 106, 249)" />
           <OrbitControls
             enableZoom={false}
             minPolarAngle = {0} 
