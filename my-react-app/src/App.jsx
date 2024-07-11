@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import Contact from './components/Contact.jsx';
 import Hero from './components/Hero.jsx';
 import Projects from './components/Projects.jsx';
-
+import Nav from './components/Nav.jsx';
 import { Canvas, useLoader} from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 import { OrbitControls } from '@react-three/drei';
@@ -15,11 +15,27 @@ extend({ TextGeometry })
 
 
 
-const Text = ({ text, color, ...props }) => {
+const HeaderText = ({ text, color, ...props }) => {
   const font = useLoader(FontLoader, '../public/fonts/Inter Black_Regular.json');
   const textOptions = {
     font,
     size: 1,
+    depth: 0.1,
+  };
+
+  return (
+    <mesh {...props}>
+      <textGeometry args={[text, textOptions]} />
+      <meshStandardMaterial color={color} />
+    </mesh>
+  );
+}
+
+const SubText = ({ text, color, ...props }) => {
+  const font = useLoader(FontLoader, '../public/fonts/Inter_Regular.json');
+  const textOptions = {
+    font,
+    size: 0.4,
     depth: 0.1,
   };
 
@@ -47,13 +63,15 @@ const App = () => {
         <Canvas style={canvasContainerStyles}>
           <ambientLight intensity={2.5} />
           <pointLight position={[10, 10, 10]} />
-          <PerspectiveCamera makeDefault position={[-1, 4.5, 13]} rotation={[0, 0, 0]} />
-          <Text text="Hello, I'm " position={[-8, 4.5, 3]} color="white" />
-          <Text text="Joe." position={[-1.6, 4.5, 3]} color="rgb(151, 106, 249)" />
+          <PerspectiveCamera makeDefault position={[-1, 4.5, 14]} rotation={[0, 0, 0]} />
+          <HeaderText  text="Hello, I'm " position={[-8, 4.5, 3]} color="white" />
+          <HeaderText text="Joe." position={[-1.6, 4.5, 3]} color="rgb(151, 106, 249)" />
+          <SubText text="A third year CS student," position={[-8, 3.5, 3]} color="white" />
+          <SubText text="Problem solver, and app developer" position={[-8, 2.8, 3]} color="white" />
           <OrbitControls
             enableZoom={false}
             minPolarAngle = {0} 
-            maxPolarAngle = {Math.PI / 2.9} 
+            maxPolarAngle = {Math.PI / 2.5} 
 
           />
           <Suspense fallback={null}>
@@ -61,6 +79,7 @@ const App = () => {
           </Suspense>
         </Canvas>
       </div>
+      <Nav/>
       <Hero/>
       <Projects/>
       <Contact/>
