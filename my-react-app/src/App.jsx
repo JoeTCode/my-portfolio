@@ -36,7 +36,7 @@ const canvasContainerStyles = {
   height: '90vh',
   
   
-  background: `url('../public/space-background.jpeg')`,
+  background: `url('../public/sb2.jpg') no-repeat`,
   backgroundSize: 'cover',
 };
 
