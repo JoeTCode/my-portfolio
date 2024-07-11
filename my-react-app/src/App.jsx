@@ -4,6 +4,7 @@ import Hero from './components/Hero.jsx';
 import Projects from './components/Projects.jsx';
 
 import { Canvas, useLoader} from '@react-three/fiber';
+import { TextureLoader } from 'three/src/loaders/TextureLoader';
 import { OrbitControls } from '@react-three/drei';
 import { PerspectiveCamera } from '@react-three/drei';
 import Scene from '../public/Scene.jsx'; 
@@ -11,6 +12,7 @@ import { extend } from '@react-three/fiber'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 extend({ TextGeometry })
+
 
 
 const Text = ({ text, color, ...props }) => {
@@ -29,15 +31,25 @@ const Text = ({ text, color, ...props }) => {
   );
 }
 
+const canvasContainerStyles = {
+  width: '100vw',
+  height: '90vh',
+  
+  
+  background: `url('../public/space-background.jpeg')`,
+  backgroundSize: 'cover',
+};
+
 const App = () => {
   return (
     <div>
-        <Canvas>
+      <div>
+        <Canvas style={canvasContainerStyles}>
           <ambientLight intensity={2.5} />
           <pointLight position={[10, 10, 10]} />
           <PerspectiveCamera makeDefault position={[-1, 4.5, 13]} rotation={[0, 0, 0]} />
           <Text text="Hello, I'm " position={[-8, 4.5, 3]} color="white" />
-          <Text text="Joe" position={[-1.6, 4.5, 3]} color="rgb(151, 106, 249)" />
+          <Text text="Joe." position={[-1.6, 4.5, 3]} color="rgb(151, 106, 249)" />
           <OrbitControls
             enableZoom={false}
             minPolarAngle = {0} 
@@ -48,9 +60,10 @@ const App = () => {
             <Scene />
           </Suspense>
         </Canvas>
-        <Hero/>
-        <Projects/>
-        <Contact/>
+      </div>
+      <Hero/>
+      <Projects/>
+      <Contact/>
     </div>
   );
   
