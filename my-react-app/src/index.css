@@ -22,10 +22,10 @@ canvas {
 }
 
 .active {
-  font-weight: 900 !important;
+  font-weight: 800 !important;
   border-bottom: 2px solid rgb(151, 106, 249);
   color: white !important;
 }
 .nav-link {
-  @apply text-[#B5B5B5] p-2 mr-16 hover:cursor-pointer hover:font-bold hover:text-white w-24;
+  @apply text-[#B5B5B5] p-2 mr-16 hover:cursor-pointer hover:font-semibold hover:text-white w-24;
 }
