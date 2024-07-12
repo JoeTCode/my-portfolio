@@ -33,6 +33,9 @@ const Nav = () => {
     return (
         <nav>
             <div className="flex flex-col items-start z-10 fixed right-0 top-0 mt-10">
+                <Link activeClass="active" to="Hero" spy={true} smooth={true} duration={500} className="text-white p-2 mr-16 hover:cursor-pointer">
+                    Hero
+                </Link>
                 <Link activeClass="active" to="Introduction" spy={true} smooth={true} duration={500} className="text-white p-2 mr-16 hover:cursor-pointer">
                     About Me
                 </Link>
