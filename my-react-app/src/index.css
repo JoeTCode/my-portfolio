@@ -21,3 +21,7 @@ canvas {
   height: 90vh !important;
 }
 
+.active {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}

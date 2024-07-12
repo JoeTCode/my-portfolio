@@ -1,19 +1,22 @@
 import { Suspense } from 'react';
+
 import Contact from './components/Contact.jsx';
-import Hero from './components/Hero.jsx';
 import Projects from './components/Projects.jsx';
 import Nav from './components/Nav.jsx';
+
 import { Canvas, useLoader} from '@react-three/fiber';
 import { TextureLoader } from 'three/src/loaders/TextureLoader';
 import { OrbitControls } from '@react-three/drei';
 import { PerspectiveCamera } from '@react-three/drei';
+
 import Scene from '../public/Scene.jsx'; 
 import { extend } from '@react-three/fiber'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
+import Introduction from './components/Introduction.jsx';
 extend({ TextGeometry })
 
-
+import { Element } from 'react-scroll';
 
 const HeaderText = ({ text, color, ...props }) => {
   const font = useLoader(FontLoader, '../public/fonts/Inter Black_Regular.json');
@@ -80,9 +83,17 @@ const App = () => {
         </Canvas>
       </div>
       <Nav/>
-      <Hero/>
-      <Projects/>
-      <Contact/>
+      
+      <Element id="Introduction">
+        <Introduction/>
+      </Element>
+      <Element id="Projects">
+        <Projects/>
+      </Element>
+      <Element id="Contact">
+        <Contact/>
+      </Element>
+      
     </div>
   );
   
