@@ -11,11 +11,11 @@ import move from "lodash-move";
 //   ];
 
   const CARD_DATA = [
-    { key:0, color: "#0B1016", text: "Card 1" },
-    { key:1, color: "#0B1016", text: "Card 2" },
-    { key:2, color: "#0B1016", text: "Card 3" },
-    { key:3, color: "#0B1016", text: "Card 4" },
-    { key:4, color: "#0B1016", text: "Card 5" }
+    { key:0, color: "white", image: "../public/html-css-js-icons.png" },
+    { key:1, color: "white", image: "../public/java-icon.png" },
+    { key:2, color: "white", image: "../public/C++.jpg" },
+    { key:3, color: "white", image: "../public/react-icon.webp"},
+    { key:4, color: "white", image: "../public/python-icon.svg"}
   ];
   
   const CARD_OFFSET = 10;
@@ -50,6 +50,10 @@ import move from "lodash-move";
                 style={{
                   ...cardStyle,
                   backgroundColor: card.color,
+                  backgroundImage: `url(${card.image})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "90%",
+                  backgroundRepeat: "no-repeat",
                   cursor: canDrag ? "grab" : "auto",
                   ...(isHovered && {
                     boxShadow: "0px 8px 16px rgb(255, 255, 255, 0.6)",
@@ -69,7 +73,6 @@ import move from "lodash-move";
                 onMouseEnter={() => handleHover(index)}
                 onMouseLeave={handleHoverExit}
               >
-                {card.text}
               </motion.li>
             );
           })}

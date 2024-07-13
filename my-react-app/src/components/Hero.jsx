@@ -50,7 +50,7 @@ const SubText = ({ text, color, ...props }) => {
 const canvasContainerStyles = {
     width: '100vw',
     height: '90vh',
-    background: `url('../public/sb2.jpg') no-repeat`,
+    background: `url('../public/canvas-bg.jpg') no-repeat`,
     backgroundSize: 'cover',
 };
 
