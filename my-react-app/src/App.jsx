@@ -10,13 +10,14 @@ import { Element } from 'react-scroll';
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-introduction-texture bg-cover bg-center">
+      {/* Image by kjpargeter on Freepik */}
       <Element id="Hero">
         <Hero/>
       </Element>
       <Nav/>
       <Element id="Introduction">
-        <Introduction/>
+        <Introduction />
       </Element>
       <Element id="Projects">
         <Projects/>

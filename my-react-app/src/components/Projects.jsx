@@ -1,7 +1,7 @@
 const Projects = () => {
     return (
         <div className="grid gap-4 grid-cols-1 mx-[30%] pt-[15rem]">
-            <h2 className="text-4xl"> Projects: </h2>
+            <h2 className="text-5xl font-black pb-10"> Projects. </h2>
             <div>
                 Project1
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.

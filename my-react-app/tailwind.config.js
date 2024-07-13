@@ -3,7 +3,11 @@ export default {
   content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'introduction-texture': "url('/public/bg-main.jpg')",
+      }
+    },
   },
   plugins: [],
 }

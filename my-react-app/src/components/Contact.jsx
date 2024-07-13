@@ -2,7 +2,7 @@ const Contact = () => {
     return (
         <div>
             <form className="grid gap-4 grid-cols-1 mx-[30%] pt-[250px] mb-[100px]">
-                <h2 className="text-4xl">Contact Details</h2>
+                <h2 className="text-5xl font-black pb-10">Contact Details.</h2>
                 <span>Full name</span>
                 <input type="text" name="name" placeholder="Enter your full name"></input>
                 <span>Email</span>
