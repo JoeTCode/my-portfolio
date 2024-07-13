@@ -41,6 +41,13 @@ canvas {
   transform: translateZ(0);
 }
 
+.card::before {
+  border-style: dotted;
+  border-width: 2px;
+  border-color: red;
+  background: linear-gradient(45deg, #ff6b6b, #f06595, #6a4c93);
+}
+
 @keyframes mulShdSpin {
   0%,
   100% {

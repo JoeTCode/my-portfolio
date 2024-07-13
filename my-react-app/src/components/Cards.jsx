@@ -11,11 +11,11 @@ import move from "lodash-move";
 //   ];
 
   const CARD_DATA = [
-    { key:0, color: "white", image: "../public/html-css-js-icons.png" },
-    { key:1, color: "white", image: "../public/java-icon.png" },
-    { key:2, color: "white", image: "../public/C++.jpg" },
-    { key:3, color: "white", image: "../public/react-icon.webp"},
-    { key:4, color: "white", image: "../public/python-icon.svg"}
+    { key:0, color: "white", image: "../public/html-css-js-icons.png", gradient: "linear-gradient(45deg, #FFE7E7, #ff6b6b, #f06595, #6a4c93) 1" },
+    { key:1, color: "white", image: "../public/java-icon.png", gradient: "linear-gradient(45deg, #b0e0e6, #b8860b, #d3d3d3, #c0c0c0) 1" },
+    { key:2, color: "white", image: "../public/C++.jpg", gradient: "linear-gradient(45deg, #a6b5c8, #5d6b7d, #46545b, #272e35) 1"},
+    { key:3, color: "white", image: "../public/react-icon.webp", gradient: "linear-gradient(45deg, #9c27b0, #673ab7, #3f51b5, #2196f3) 1"},
+    { key:4, color: "white", image: "../public/python-icon.svg", gradient: "linear-gradient(45deg, #ffbb58, #f783ac, #7c82a8, #48bfe3) 1"}
   ];
   
   const CARD_OFFSET = 10;
@@ -47,9 +47,13 @@ import move from "lodash-move";
             return (
               <motion.li
                 key={card.key}
+                classname="card"
                 style={{
                   ...cardStyle,
                   backgroundColor: card.color,
+                  border: "3px solid", // Standard border properties
+                  borderImage: card.gradient, // Gradient border
+              
                   backgroundImage: `url(${card.image})`,
                   backgroundPosition: "center",
                   backgroundSize: "90%",
@@ -103,5 +107,8 @@ const cardStyle = {
   transformOrigin: "top center",
   listStyle: "none"
 };
+
+
+  
 
 export default CardStack;
