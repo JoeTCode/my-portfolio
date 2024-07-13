@@ -4,9 +4,6 @@ import Introduction from './components/Introduction.jsx';
 import Projects from './components/Projects.jsx';
 import Contact from './components/Contact.jsx';
 
-
-//import Scene from '../public/Scene.jsx'; 
-
 import { Element } from 'react-scroll';
 
 
