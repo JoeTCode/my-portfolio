@@ -4,6 +4,7 @@ import Introduction from './components/Introduction.jsx';
 import Projects from './components/Projects.jsx';
 import Contact from './components/Contact.jsx';
 
+
 import { Element } from 'react-scroll';
 
 
@@ -17,7 +18,7 @@ const App = () => {
       </Element>
       <Nav/>
       <Element id="Introduction">
-        <Introduction />
+        <Introduction/>
       </Element>
       <Element id="Projects">
         <Projects/>

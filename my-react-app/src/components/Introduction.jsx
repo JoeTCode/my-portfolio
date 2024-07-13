@@ -1,15 +1,25 @@
 import Reveal from './Reveal.jsx';
+import CardStack from './Cards.jsx';
 const Introduction = () => {
   return (
-    <div className="mx-[30%] pt-[250px]">
+    <div className=" mx-[20%] pt-[250px]">
         <Reveal>
-            <h2 className="text-5xl font-black pb-10"> About Me. </h2>
+            <h2 className="pl-4 text-5xl font-black pb-10"> About Me. </h2>
         </Reveal>
         <Reveal>
-            <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum convallis ullamcorper augue id ornare. Proin at consequat nulla, ut feugiat sem. Aenean lacinia vitae ante eget dictum. Morbi enim nibh, lacinia eget luctus eu, vehicula eu mauris. Suspendisse nisi nunc, ultrices sit amet nunc ac, consequat elementum metus. Proin pretium a massa vel eleifend. Proin malesuada metus id justo ultrices ultrices. Nulla facilisi. Etiam vestibulum ac enim sed porta. Aliquam consequat pellentesque ex eu aliquam. Aliquam nibh libero, porttitor in metus at, luctus vestibulum odio. Cras pulvinar nulla at vulputate blandit.
+          <div className='pl-4 pb-4 lg:flex lg:pt-20 lg:gap-x-11 lg:pr-5'>
+            <div className='w-[80%] pb-32 lg:w-[60%]'>
+                I'm Joe, a third year computer science student, and aspiring app developer. I like to spend my time either creating
+                software solutions to real life problems, watching videos about new tech, and enjoying music. <br></br>
+                Additionally, to wind down after working on projects or uni assignments, I like to play video games that somewhat challenge my mind, 
+                play covers of my favourite songs, or have a hit at the nearest tennis court! I have a somewhat artistic mind, and
+                love to combine the appeal of art and the functionality of code. <br></br>
+                I hope to catch your attention with this portfolio, and if it does, please contact me below!
             </div>
+            <CardStack/>
+          </div>
         </Reveal>
+        
         
     </div>
   )
