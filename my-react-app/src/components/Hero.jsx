@@ -67,7 +67,7 @@ const Hero = () => {
                 setFontSize(0.5); // Adjust font size for smaller screens
                 setPos(0.5);
             if (window.innerWidth <= 600) {
-                setPos(0.2);
+                setPos(0.3);
             }
             } else {
                 setFontSize(1); // Default font size for larger screens
@@ -85,8 +85,8 @@ const Hero = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
     let specific_multiplier;
-    if (pos === 0.2) {
-        specific_multiplier = -1.1;
+    if (pos === 0.3) {
+        specific_multiplier = -0.6;
     } else {
         specific_multiplier = pos;
     }

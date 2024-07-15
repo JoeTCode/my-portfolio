@@ -60,7 +60,7 @@ const Nav = () => {
             </div>
             <div className={`${
             (hovered || showNavOnScroll) ? 'opacity-100' : 'opacity-0'
-            } transition-opacity duration-700 ease-in-out flex flex-col items-start z-10 fixed right-0 top-0 mt-1`}
+            } transition-opacity duration-700 ease-in-out flex flex-col items-start z-10 fixed -right-20 sm:right-0 text-xs sm:text-base top-0 mt-1`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             >

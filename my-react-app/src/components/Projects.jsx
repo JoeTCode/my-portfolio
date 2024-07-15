@@ -73,33 +73,38 @@ const ProjectCard = ({
 const Projects = () => {
     
     return (
-        <Reveal>
+        
             <div className="grid gap-4 grid-cols-1 mx-[10%] pt-[10rem]">
-                <p className='mx-[13%] tracking-wide text-slate-400'>WHAT I SPENT MY TIME ON</p>
-                <h2 className="mx-[13%] text-5xl font-black pb-10"> Projects<span className="text-accentColor">.</span></h2>
+                <Reveal>
+                    <p className='pl-4 mx-[13%] tracking-wide text-slate-400'>WHAT I SPENT MY TIME ON</p>
+                    <h2 className="pl-4 mx-[13%] text-5xl font-black pb-10"> Projects<span className="text-accentColor">.</span></h2>
+                </Reveal>
                 <hr className='mx-[13%] mb-10 xl:mb-10'></hr>
-                <div className='mx-[13%]'>
-                    Project1
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum convallis ullamcorper augue id ornare sit amet nunc ac.
-                    Proin at consequat nulla, ut feugiat sem. Aenean lacinia vitae ante eget
-                    dictum. Morbi enim nibh, lacinia eget luctus eu, vehicula eu mauris.
-                    Suspendisse nisi nunc, ultrices sit amet nunc ac, consequat elementum metus.
-                    Proin pretium a massa vel eleifend. Proin malesuada metus id justo ultrices ultrices. 
-                    Nulla facilisi. Etiam vestibulum ac enim sed porta. Aliquam consequat pellentesque ex
-                    eu aliquam. Aliquam nibh libero, porttitor in metus at, luctus vestibulum odio. 
-                    Cras pulvinar nulla at vulputate blandit. Ut feugiat sem.
+                <div className='pl-4 mx-[13%]'>
+                    <Reveal>
+                    I like to develop side-projects when I have some time on my hands, as they may not only end up helping me or others
+                    in some aspect of their life, but they help develop and refine my skills as a developer. <br></br>
+                    <br></br>
+                    </Reveal>
+                    <Reveal>
+                    While it is sometimes daunting to learn new frameworks/languages, I do like to challenge myself 
+                    and I find this is the best way to expand my repertoire. <br></br>
+                    <br></br>
+                    </Reveal>
+                    <Reveal>
+                    Here are some of my favorites!
+                    </Reveal>
 
 
                 </div>
                 
-                <div className='mt-20 mx-[13%] flex flex-wrap gap-7'>
+                <div className='mx-[0%] pl-4 mt-20 sm:mx-[13%] flex flex-wrap gap-7'>
                     {projects.map((project, index) => (
                     <ProjectCard key={`project-${index}`} index={index} {...project} />
                     ))}
                 </div>
             </div>
-        </Reveal>
+        
     )
 }
 
