@@ -47,7 +47,6 @@ import move from "lodash-move";
             return (
               <motion.li
                 key={card.key}
-                classname="card"
                 style={{
                   ...cardStyle,
                   backgroundColor: card.color,
@@ -86,11 +85,8 @@ import move from "lodash-move";
   };
   
 const wrapperStyle = {
-//   position: "relative",
-//   display: "flex",
-//   alignItems: "center",
-//   justifyContent: "center",
-//   height: "100vh"
+
+
 };
 
 const cardWrapStyle = {

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from 'framer-motion';
 
-const Reveal = ({ children, width = "fit-content"}) => {
+const Reveal = ({ children, width = "fit-content", delay = 0.25 }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
 
@@ -9,7 +9,7 @@ const Reveal = ({ children, width = "fit-content"}) => {
 
     useEffect(() => {
         if (isInView) {
-            console.log('viewing');
+            
             mainControls.start("visible");
         }
     }, [isInView]);
@@ -23,7 +23,7 @@ const Reveal = ({ children, width = "fit-content"}) => {
                 }}
                 initial="hidden"
                 animate={mainControls}
-                transition={{ duration: 0.75, delay: 0.25}}
+                transition={{ duration: 0.75, delay: delay}} // delay is 0.25 normally
             >
                 {children}
             </motion.div>
