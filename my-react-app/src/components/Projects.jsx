@@ -46,7 +46,12 @@ const ProjectCard = ({
           </div>
   
           <div className='mt-5'>
-            <h3 className='text-white font-bold text-[24px]'>{name}</h3>
+            <div className="flex gap-4">
+                <h3 className='text-white font-bold text-[22px]'>
+                    {name}
+                </h3>
+                <hr className="w-[50%] relative top-5"></hr>
+            </div>
             <p className='mt-2 text-[14px]'>{description}</p>
           </div>
   
@@ -68,30 +73,33 @@ const ProjectCard = ({
 const Projects = () => {
     
     return (
-        <div className="grid gap-4 grid-cols-1 mx-[10%] pt-[10rem]">
-            <h2 className="mr-[20%] text-5xl font-black pb-10"> Projects <span className="text-accentColor">.</span></h2>
-            <hr className='mb-10 xl:mb-10'></hr>
-            <div className='mr-[20%]'>
-                Project1
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Vestibulum convallis ullamcorper augue id ornare sit amet nunc ac.
-                Proin at consequat nulla, ut feugiat sem. Aenean lacinia vitae ante eget
-                dictum. Morbi enim nibh, lacinia eget luctus eu, vehicula eu mauris.
-                Suspendisse nisi nunc, ultrices sit amet nunc ac, consequat elementum metus.
-                Proin pretium a massa vel eleifend. Proin malesuada metus id justo ultrices ultrices. 
-                Nulla facilisi. Etiam vestibulum ac enim sed porta. Aliquam consequat pellentesque ex
-                eu aliquam. Aliquam nibh libero, porttitor in metus at, luctus vestibulum odio. 
-                Cras pulvinar nulla at vulputate blandit. Ut feugiat sem.
+        <Reveal>
+            <div className="grid gap-4 grid-cols-1 mx-[10%] pt-[10rem]">
+                <p className='mx-[13%] tracking-wide text-slate-400'>WHAT I SPENT MY TIME ON</p>
+                <h2 className="mx-[13%] text-5xl font-black pb-10"> Projects<span className="text-accentColor">.</span></h2>
+                <hr className='mx-[13%] mb-10 xl:mb-10'></hr>
+                <div className='mx-[13%]'>
+                    Project1
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Vestibulum convallis ullamcorper augue id ornare sit amet nunc ac.
+                    Proin at consequat nulla, ut feugiat sem. Aenean lacinia vitae ante eget
+                    dictum. Morbi enim nibh, lacinia eget luctus eu, vehicula eu mauris.
+                    Suspendisse nisi nunc, ultrices sit amet nunc ac, consequat elementum metus.
+                    Proin pretium a massa vel eleifend. Proin malesuada metus id justo ultrices ultrices. 
+                    Nulla facilisi. Etiam vestibulum ac enim sed porta. Aliquam consequat pellentesque ex
+                    eu aliquam. Aliquam nibh libero, porttitor in metus at, luctus vestibulum odio. 
+                    Cras pulvinar nulla at vulputate blandit. Ut feugiat sem.
 
 
+                </div>
+                
+                <div className='mt-20 mx-[13%] flex flex-wrap gap-7'>
+                    {projects.map((project, index) => (
+                    <ProjectCard key={`project-${index}`} index={index} {...project} />
+                    ))}
+                </div>
             </div>
-            
-            <div className='mt-20 flex flex-wrap gap-7'>
-                {projects.map((project, index) => (
-                <ProjectCard key={`project-${index}`} index={index} {...project} />
-                ))}
-            </div>
-        </div>
+        </Reveal>
     )
 }
 

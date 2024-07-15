@@ -4,7 +4,7 @@ const Contact = () => {
         <div>
             <Reveal>
                 <form className="grid gap-4 grid-cols-1 mx-[30%] pt-[250px] mb-[100px]">
-                    
+                        <p className='tracking-wide text-slate-300'>GET IN TOUCH</p>
                         <h2 className="text-5xl font-black pb-10">Contact Details.</h2>
                     
                         <span>Full name</span>
