@@ -1,6 +1,6 @@
 import { projects } from "../constants";
 import { Tilt } from "react-tilt";
-import github from "../../public/github.png";
+import { github } from "../assets";
 import Reveal from './Reveal.jsx';
 
 const ProjectCard = ({

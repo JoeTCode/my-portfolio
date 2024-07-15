@@ -1,3 +1,4 @@
+import { temp_projects_bg } from "../assets";
 const projects = [
     {
       name: "Car Rent",
@@ -17,7 +18,7 @@ const projects = [
           color: "pink-text-gradient",
         },
       ],
-      image: "../public/project-bg.png",
+      image: temp_projects_bg,
       source_code_link: "https://github.com/",
     },
     {
@@ -38,7 +39,7 @@ const projects = [
           color: "pink-text-gradient",
         },
       ],
-      image: "../public/project-bg.png",
+      image: temp_projects_bg,
       source_code_link: "https://github.com/",
     },
     {
@@ -59,7 +60,7 @@ const projects = [
           color: "pink-text-gradient",
         },
       ],
-      image: "../public/project-bg.png",
+      image: temp_projects_bg,
       source_code_link: "https://github.com/",
     },
   ];

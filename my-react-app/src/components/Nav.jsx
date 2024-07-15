@@ -50,7 +50,7 @@ const Nav = () => {
       };
 
     return (
-        <nav className>
+        <nav>
             <div // this div detects when user mouses to nav, it's size determines detection radius
             className="opacity-0 fixed right-[5rem] top-1 z-0 px-16 py-20 pb-[10rem]"
             onMouseEnter={handleMouseEnter}

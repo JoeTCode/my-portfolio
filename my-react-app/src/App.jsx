@@ -12,7 +12,7 @@ import { Element } from 'react-scroll';
 const App = () => {
   return (
     <div className="bg-introduction-texture bg-cover bg-center">
-      {/* Image by kjpargeter on Freepik */}
+      {/* space bg-image by kjpargeter on Freepik */}
       <Element id="Hero">
         <Hero/>
       </Element>

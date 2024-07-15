@@ -1,8 +1,10 @@
 import Reveal from './Reveal.jsx';
 import CardStack from './Cards.jsx';
+import { terminal_lime } from '../assets/index.js';
+
 const Introduction = () => {
   return (
-    <div className=" mx-[20%] pt-[250px]">
+    <div className=" mx-[20%] pt-[200px]">
         <Reveal>
             <p className='pl-6 pb-2 tracking-widest text-slate-400'>INTRODUCTION</p>
             <h2 className="pb-10 xl:pb-0 pl-4 text-5xl font-black"> About Me<span className="text-accentColor">.</span> </h2>
@@ -24,7 +26,7 @@ const Introduction = () => {
             </div>
             <div className='xl:relative xl:-top-10'>
               <p className='relative -top-24 left-24 font-black text-lg'>
-                <img src="../public/terminal-icon-lime.svg"  className='w-6 relative top-[27px] right-8'></img>
+                <img src={terminal_lime}  className='w-6 relative top-[27px] right-8'></img>
                 Technologies I <span className='text-accentColor'>love</span>
               </p>
               <CardStack/>

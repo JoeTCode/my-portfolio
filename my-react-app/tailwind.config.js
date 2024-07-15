@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
@@ -8,7 +9,7 @@ export default {
         accentColor: "rgb(151, 106, 249)",
       },
       backgroundImage: {
-        'introduction-texture': "url('/public/bg-main.jpg')",
+        'introduction-texture': "url('/src/assets/website-bg-main.jpg')",
       }
     },
   },

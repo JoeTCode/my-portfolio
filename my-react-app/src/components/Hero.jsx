@@ -1,3 +1,5 @@
+import React, { useEffect, useState } from 'react';
+
 import { Suspense } from 'react';
 
 import Scene from '../../public/Scene.jsx';
@@ -15,11 +17,13 @@ import { FontLoader } from 'three/examples/jsm/loaders/FontLoader'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry'
 extend({ TextGeometry })
 
-const HeaderText = ({ text, color, ...props }) => {
-    const font = useLoader(FontLoader, '../../public/fonts/Inter Black_Regular.json');
+import { canvas_bg } from '../assets';
+
+const HeaderText = ({ text, color, fontMultiplier, ...props}) => {
+    const font = useLoader(FontLoader, '../../fonts/Inter Black_Regular.json');
     const textOptions = {
         font,
-        size: 1,
+        size: 1 * fontMultiplier,
         depth: 0.1,
     };
 
@@ -31,11 +35,11 @@ const HeaderText = ({ text, color, ...props }) => {
     );
 }
   
-const SubText = ({ text, color, ...props }) => {
-    const font = useLoader(FontLoader, '../public/fonts/Inter_Regular.json');
+const SubText = ({ text, color, fontMultiplier, ...props }) => {
+    const font = useLoader(FontLoader, '../fonts/Inter_Regular.json');
     const textOptions = {
       font,
-      size: 0.4,
+      size: 0.4 * fontMultiplier,
       depth: 0.1,
     };
   
@@ -50,11 +54,42 @@ const SubText = ({ text, color, ...props }) => {
 const canvasContainerStyles = {
     width: '100vw',
     height: '90vh',
-    background: `url('../public/canvas-bg.jpg') no-repeat`,
+    background: `url(${canvas_bg}) no-repeat`,
     backgroundSize: 'cover',
 };
 
 const Hero = () => {
+    const [fontSize, setFontSize] = useState(1); // Default font size
+    const [pos, setPos] = useState(1);
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 1200) {
+                setFontSize(0.5); // Adjust font size for smaller screens
+                setPos(0.5);
+            if (window.innerWidth <= 600) {
+                setPos(0.2);
+            }
+            } else {
+                setFontSize(1); // Default font size for larger screens
+                setPos(1);
+            }
+        };
+
+        // Initial font size calculation on component mount
+        handleResize();
+
+        // Event listener for window resize
+        window.addEventListener('resize', handleResize);
+
+        // Cleanup function to remove event listener
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+    let specific_multiplier;
+    if (pos === 0.2) {
+        specific_multiplier = -1.1;
+    } else {
+        specific_multiplier = pos;
+    }
     return (
         <div>
             <Canvas style={canvasContainerStyles}>
@@ -62,10 +97,10 @@ const Hero = () => {
                 <pointLight position={[10, 10, 10]} />
                 <PerspectiveCamera makeDefault position={[-1, 4.5, 14]} rotation={[0, 0, 0]} />
 
-                <HeaderText  text="Hello, I'm " position={[-8, 4.5, 3]} color="white" />
-                <HeaderText text="Joe." position={[-1.6, 4.5, 3]} color="rgb(151, 106, 249)" />
-                <SubText text="A third year CS student," position={[-8, 3.5, 3]} color="white" />
-                <SubText text="Problem solver, and app developer" position={[-8, 2.8, 3]} color="white" />
+                <HeaderText  text="Hello, I'm " position={[-8*pos, 4.5*fontSize, 3]} color="white" fontMultiplier={fontSize} />
+                <HeaderText text="Joe." position={[-1.6*specific_multiplier, 4.5*fontSize, 3]} color="rgb(151, 106, 249)" fontMultiplier={fontSize} />
+                <SubText text="A third year CS student," position={[-8*pos, 3.5*fontSize, 3]} color="white" fontMultiplier={fontSize} />
+                <SubText text="Problem solver, and app developer" position={[-8*pos, 2.8*fontSize, 3]} color="white" fontMultiplier={fontSize} />
 
                 <OrbitControls
                     enableZoom={false}
