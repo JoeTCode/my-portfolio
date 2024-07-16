@@ -112,7 +112,7 @@ const CardStack = () => {
 };
   
 const wrapperStyle = {
-
+  paddingTop: '70px'
 
 };
 
