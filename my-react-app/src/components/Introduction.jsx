@@ -35,7 +35,7 @@ const Introduction = () => {
             
             <div className='xl:relative xl:-top-10'>
             
-              <p className='relative max-[400px]:left-8 -top-24 left-10 sm:left-24 font-black text-lg'>
+              <p className='relative max-[400px]:left-8 -top-20 left-10 sm:left-24 font-black text-lg 2xl:-top-14'>
                 <img src={terminal_lime}  className='w-6 relative top-[27px] right-8'></img>
                 Technologies I <span className='text-accentColor'>love</span>
               </p>

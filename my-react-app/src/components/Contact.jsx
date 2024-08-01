@@ -66,7 +66,7 @@ const Contact = () => {
                 <form 
                 ref={formRef}
                 onSubmit={handleSubmit}
-                className="grid gap-6 grid-cols-1 mx-[30%] p-10 rounded-xl mt-[200px] pb-[100px] bg-black">
+                className="grid gap-6 grid-cols-1 mx-10 sm:mx-[30%] p-10 rounded-xl mt-[200px] pb-[100px] bg-black">
                     <Reveal>
                         <p className='tracking-widest text-slate-400'>GET IN TOUCH</p>
                         <h2 className="text-5xl font-black pb-10">Contact Details<span className="text-accentColor">.</span></h2>
@@ -76,21 +76,21 @@ const Contact = () => {
                         <input type="text" name="name"
                         value={form.name}
                         onChange={handleChange}
-                        placeholder="Enter your full name" className='mt-2 p-1.5 rounded-lg w-full'></input>
+                        placeholder="Enter your full name" className='mt-2 p-1.5 rounded-lg w-full bg-[#121212]'></input>
                     </Reveal>
                      <Reveal>
                         <span>Email</span>
                         <input type="text" name="email"
                         value={form.email}
                         onChange={handleChange}
-                        placeholder="Enter your email" className='mt-2 p-1.5 rounded-lg w-full'></input>
+                        placeholder="Enter your email" className='mt-2 p-1.5 rounded-lg w-full bg-[#121212]'></input>
                     </Reveal>
                     <Reveal>
                         <span>Message</span>
                         <textarea name="message" rows={10}
                         value={form.message}
                         onChange={handleChange}
-                        placeholder="Enter your message" className='mt-2 p-1.5 rounded-lg w-full'></textarea>
+                        placeholder="Enter your message" className='mt-2 p-1.5 rounded-lg w-full bg-[#121212]'></textarea>
                     </Reveal>
                         <button 
                         type='submit'
