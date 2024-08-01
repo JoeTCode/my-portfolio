@@ -8,7 +8,6 @@ export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.gltf'],
   build: {
-    sourcemap: true,
     rollupOptions: {
         // output:{
         //     manualChunks(id) {
@@ -18,10 +17,6 @@ export default defineConfig({
         //     }
         // }
       plugins: [
-        visualizer({
-          filename: './dist/stats.html',
-          open: true
-        })
       ]
     }
   }

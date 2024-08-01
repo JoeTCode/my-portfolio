@@ -76,21 +76,24 @@ const Contact = () => {
                         <input type="text" name="name"
                         value={form.name}
                         onChange={handleChange}
-                        placeholder="Enter your full name" className='mt-2 p-1.5 rounded-lg w-full bg-[#121212]'></input>
+                        placeholder="Enter your full name" className='mt-2 p-1.5 rounded-lg w-full bg-[#121212]'
+                        required></input>
                     </Reveal>
                      <Reveal>
                         <span>Email</span>
-                        <input type="text" name="email"
+                        <input type="email" name="email"
                         value={form.email}
                         onChange={handleChange}
-                        placeholder="Enter your email" className='mt-2 p-1.5 rounded-lg w-full bg-[#121212]'></input>
+                        placeholder="Enter your email" className='mt-2 p-1.5 rounded-lg w-full bg-[#121212]'
+                        required></input>
                     </Reveal>
                     <Reveal>
                         <span>Message</span>
                         <textarea name="message" rows={10}
                         value={form.message}
                         onChange={handleChange}
-                        placeholder="Enter your message" className='mt-2 p-1.5 rounded-lg w-full bg-[#121212]'></textarea>
+                        placeholder="Enter your message" className='mt-2 p-1.5 rounded-lg w-full bg-[#121212]'
+                        required></textarea>
                     </Reveal>
                         <button 
                         type='submit'
