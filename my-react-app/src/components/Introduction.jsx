@@ -14,22 +14,24 @@ const Introduction = () => {
           <div className='pl-4 pb-4 xl:flex xl:items-center xl:pt-20 xl:gap-x-11 xl:pr-5'>
             <div className='w-[80%] pb-32 lg:w-[60%]'>
               <Reveal>
-                I'm Joe, a third year computer science student, and aspiring app developer. <br></br>
+                I'm Joe, a first class computer science graduate, and aspiring software developer. <br></br>
                 <br></br>
               </Reveal>
               <Reveal>
                 I like to spend my time either creating
-                software solutions to real life problems, watching videos about new tech, and enjoying music. <br></br>
+                software solutions to real life problems, watching videos about new tech, or enjoying music. <br></br>
                 <br></br>
               </Reveal>
               <Reveal>
-                Additionally, to wind down after working on projects or uni assignments, I like to play video games that somewhat challenge my mind, 
-                play covers of my favourite songs, or have a hit at the nearest tennis court! <br></br>
+                Throughout my projects, I’ve worked with technologies like Node.js, Express, React, and Python, focusing on performance, security, and clean architecture. <br></br>
+                <br></br>
+              </Reveal>
+              <Reveal>
+                I’m particularly passionate about building secure, user-focused web applications, with a strong interest in backend development, authentication systems, and data visualisation. <br></br>
               </Reveal>
                 <br></br>
               <Reveal>
-                I have a somewhat artistic mind, and love to combine the appeal of art and the functionality of code.
-                That being said, I hope to catch your attention with this portfolio, and if it does, please contact me below!
+                I’m always looking to learn new tools, collaborate with others, and contribute to meaningful projects that make an impact.
               </Reveal>
             </div>
             
@@ -44,12 +46,7 @@ const Introduction = () => {
                 <CardStack/>
               </Reveal>
             </div>
-            
-            
           </div>
-        
-        
-        
     </div>
   )
 }

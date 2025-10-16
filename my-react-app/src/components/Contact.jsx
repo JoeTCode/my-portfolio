@@ -97,7 +97,7 @@ const Contact = () => {
                     </Reveal>
                         <button 
                         type='submit'
-                        className='mt-10 p-2 bg-accentColor hover:bg-[#A87BFF]
+                        className='mt-10 p-2 bg-accentColor hover:bg-[#A87BFF] rounded-lg
                         active:bg-[#8255DC] active:scale-95
                         transition-all duration-300 ease-in-out
                         '>

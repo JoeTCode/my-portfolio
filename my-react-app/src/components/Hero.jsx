@@ -99,8 +99,8 @@ const Hero = () => {
 
                 <HeaderText  text="Hello, I'm " position={[-8*pos, 4.5*fontSize, 3]} color="white" fontMultiplier={fontSize} />
                 <HeaderText text="Joe." position={[-1.6*specific_multiplier, 4.5*fontSize, 3]} color="rgb(151, 106, 249)" fontMultiplier={fontSize} />
-                <SubText text="A third year CS student," position={[-8*pos, 3.5*fontSize, 3]} color="white" fontMultiplier={fontSize} />
-                <SubText text="Problem solver, and app developer" position={[-8*pos, 2.8*fontSize, 3]} color="white" fontMultiplier={fontSize} />
+                <SubText text="A first class comp-sci grad," position={[-8*pos, 3.5*fontSize, 3]} color="white" fontMultiplier={fontSize} />
+                <SubText text="problem solver, and app developer" position={[-8*pos, 2.8*fontSize, 3]} color="white" fontMultiplier={fontSize} />
 
                 <OrbitControls
                     enableZoom={false}
